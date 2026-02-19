@@ -33,6 +33,6 @@ def verificarFormatos(path):
                     shutil.move(rutaDeElArchivo, rutaCarpeta)
                 except OSError as e: #try catch
                     print("Error creando carpeta")
-
+    else: print("No es una carpeta.")
 
 verificarFormatos(path)
