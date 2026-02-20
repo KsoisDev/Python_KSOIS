@@ -1,5 +1,6 @@
 import os
-path = os.getcwd()
+path = os.path.dirname(os.path.abspath(__file__))
+startName = os.path.join(path, "start.bat")
 archivosArray = []
 rutaArchivos = []
 print(path)
@@ -20,8 +21,13 @@ def printearArchivos():
         print(f"{i+1}.{archivosArray[i]}")
 def pedirOpcion():
     opcion = input("¿Que programa quieres ejecutar?: ")
-    numero = int(opcion)
-    ejecutarArchivos(numero-1)
+    try:
+        numero = int(opcion)
+        ejecutarArchivos(numero-1)
+    except Exception:
+        input("error en dar el numero")
+    
 verificarArchivos(path)
 printearArchivos()
 pedirOpcion()
+
