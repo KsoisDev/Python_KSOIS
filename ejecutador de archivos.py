@@ -1,5 +1,4 @@
 import os
-print("hello world")
 path = os.getcwd()
 archivosArray = []
 rutaArchivos = []
@@ -20,8 +19,9 @@ def printearArchivos():
     for i in range(len(archivosArray)):
         print(f"{i+1}.{archivosArray[i]}")
 def pedirOpcion():
-    opcion = int(input("¿Que programa quieres ejecutar?: "))
-    ejecutarArchivos(opcion-1)
+    opcion = input("¿Que programa quieres ejecutar?: ")
+    numero = int(opcion)
+    ejecutarArchivos(numero-1)
 verificarArchivos(path)
 printearArchivos()
 pedirOpcion()
