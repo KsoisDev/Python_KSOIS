@@ -1,6 +1,6 @@
 import os
 import shutil
-path = input("Ingrese la ruta del archivo: ")
+path = input("Ingrese la ruta de la carpeta: ")
 path = path.replace('"', '')
 formatos = {
     "pdf": "PDFs",
